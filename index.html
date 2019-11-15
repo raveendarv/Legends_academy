@@ -363,9 +363,21 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="js/google-map.js"></script> -->
   <script src="js/main.js"></script>
-    
+    <script>
+	var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 12.9532229, lng: 77.617226},
+          zoom: 8
+        });
+      }
+    </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4tHsvLrkRcllgv5-e2ymXvaKmCspGlqQ&callback=initMap"
+	  type="text/javascript"></script>
+	
+	</script>
   </body>
 </html>
